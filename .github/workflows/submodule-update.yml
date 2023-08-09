@@ -27,3 +27,4 @@ jobs:
         branch-suffix: timestamp
         delete-branch: true
         labels: dependencies
+        token: ${{ secrets.UPDATE_SUBMODULE }}
