@@ -25,11 +25,9 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v5
       with:
-        author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
         title: 'Update Submodule'
         body: 'An update was made to the submodule.'
         commit-message: 'chore: update submodule'
-        committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
         branch: 'update-submodule'
         branch-suffix: timestamp
         delete-branch: true
