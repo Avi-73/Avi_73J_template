@@ -12,11 +12,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: github-actions bot
-      run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-
     - name: Update Submodule
       run: |
         git submodule update --init --recursive
@@ -25,6 +20,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v5
       with:
+        author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
         title: 'Update Submodule'
         body: 'An update was made to the submodule.'
         commit-message: 'chore: update submodule'
